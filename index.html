@@ -10,7 +10,6 @@
         :root {
             --gold: #C9A44C;
             --dark-blue: #06113A;
-            --light-blue: #53C7F5;
         }
         body { font-family: 'Inter', sans-serif; background-color: var(--dark-blue); }
         .font-serif { font-family: 'Playfair Display', serif; }
@@ -29,21 +28,20 @@
             height: 60px;
             border-radius: 50px;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
     </style>
 </head>
 <body class="text-white">
 
-    <a href="https://wa.me/5511994208044" target="_blank" class="whatsapp-float">
-        <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+    <a href="https://wa.me/5511994208044" target="_blank" class="whatsapp-float" title="Falar no WhatsApp">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
     </a>
@@ -51,44 +49,48 @@
     <header class="fixed top-0 z-50 w-full border-b border-[#C9A44C]/20 glass">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <div class="flex items-center gap-3">
-                <img src="https://mge-ai-web-test.s3.us-east-1.amazonaws.com/temp/chatgpt_image_1_de_abr._de_2026_16_49_10.jpg" alt="Logo" class="h-12 w-12 rounded-full border border-gold object-cover">
-                <span class="text-sm font-bold tracking-widest text-gold uppercase hidden md:block">Flavia Alves Advisory</span>
+                <img src="https://mge-ai-web-test.s3.us-east-1.amazonaws.com/temp/chatgpt_image_1_de_abr._de_2026_16_49_10.jpg" alt="Logo Flavia Alves" class="h-12 w-12 rounded-full border border-gold object-cover shadow-lg">
+                <span class="text-sm font-bold tracking-widest text-gold uppercase hidden lg:block">Flavia Alves Advisory</span>
             </div>
-            <nav class="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-widest text-[#D8E2FF]">
-                <a href="#sobre" class="hover:text-gold transition">Sobre</a>
+            <nav class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-[#D8E2FF]">
+                <a href="#home" class="hover:text-gold transition">Início</a>
                 <a href="#servicos" class="hover:text-gold transition">Serviços</a>
                 <a href="#cases" class="hover:text-gold transition">Cases</a>
+                <a href="tel:5511994208044" class="hover:text-gold transition">+55 11 99420-8044</a>
             </nav>
-            <a href="https://wa.me/5511994208044" class="rounded-full border border-gold px-6 py-2 text-xs font-bold uppercase tracking-tighter text-gold hover:bg-gold hover:text-[#06113A] transition">
-                Contato
+            <a href="https://wa.me/5511994208044" class="gold-gradient text-[#06113A] px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:scale-105 transition">
+                Falar com a Flavia
             </a>
         </div>
     </header>
 
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="absolute top-20 right-0 w-1/3 h-full opacity-20 pointer-events-none">
-            <img src="https://mge-ai-web-test.s3.us-east-1.amazonaws.com/temp/chatgpt_image_1_de_abr._de_2026_16_49_10.jpg" class="w-full grayscale">
-        </div>
-        
-        <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div>
-                <p class="text-blue-400 font-bold tracking-[0.4em] uppercase text-sm mb-4">Exclusividade & Inteligência</p>
+    <section id="home" class="relative min-h-screen flex items-center pt-24 overflow-hidden px-6">
+        <div class="mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <p class="text-[#53C7F5] font-bold tracking-[0.4em] uppercase text-xs mb-4">Clareza | Direção | Estratégia</p>
                 <h1 class="text-5xl md:text-7xl font-serif leading-tight mb-6">
-                    A ascensão do seu <span class="text-gold italic">Patrimônio Global.</span>
+                    A ascensão do seu <br><span class="text-gold italic">Patrimônio Global.</span>
                 </h1>
-                <p class="text-lg text-[#D8E2FF]/70 mb-10 max-w-lg">
-                    Advisory estratégica para investidores que buscam segurança internacional, diversificação imobiliária e mentoria de alto impacto.
+                <p class="text-lg text-[#D8E2FF]/70 mb-10 max-w-lg leading-relaxed">
+                    Mentoria financeira e comportamental personalizada. Unimos técnica e mentalidade para construir sua liberdade e segurança internacional.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#servicos" class="gold-gradient text-[#06113A] px-10 py-4 rounded-full font-bold uppercase text-sm text-center shadow-xl hover:scale-105 transition">Explorar Serviços</a>
-                    <a href="tel:5511994208044" class="border border-white/20 px-10 py-4 rounded-full font-bold uppercase text-sm text-center hover:bg-white/5 transition">+55 11 99420-8044</a>
+                    <a href="#servicos" class="gold-gradient text-[#06113A] px-10 py-5 rounded-full font-bold uppercase text-xs text-center shadow-2xl hover:brightness-110 transition">
+                        Nossas Frentes de Atuação
+                    </a>
                 </div>
             </div>
-            <div class="relative group">
-                <div class="absolute -inset-4 bg-gold/20 blur-3xl rounded-full"></div>
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
-                     alt="Flavia Alves" 
-                     class="relative rounded-2xl border border-gold/30 grayscale hover:grayscale-0 transition duration-700 shadow-2xl">
+
+            <div class="relative flex justify-center items-center lg:justify-end">
+                <div class="absolute w-[120%] h-[120%] bg-gold/10 blur-[100px] rounded-full pointer-events-none"></div>
+                <div class="relative w-full max-w-md">
+                    <div class="absolute -bottom-6 -left-6 bg-[#0B1C5A] gold-border p-6 rounded-2xl z-20 hidden md:block">
+                        <p class="text-gold font-serif italic text-xl">"Decisões extraordinárias requerem clareza absoluta."</p>
+                    </div>
+                    <img src="https://mge-ai-web-test.s3.us-east-1.amazonaws.com/temp/image_d583ca.jpg" 
+                         alt="Flavia Alves" 
+                         class="rounded-[2.5rem] border border-gold/40 shadow-2xl relative z-10 w-full object-cover aspect-[4/5]">
+                </div>
             </div>
         </div>
     </section>
@@ -96,64 +98,69 @@
     <section id="servicos" class="py-24 bg-[#040D2E]">
         <div class="mx-auto max-w-7xl px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-serif text-gold">Soluções Estratégicas</h2>
-                <div class="h-1 w-20 bg-gold mx-auto mt-4"></div>
+                <h2 class="text-4xl font-serif text-gold mb-4 uppercase tracking-wider">Expertise Advisory</h2>
+                <div class="h-1 w-24 bg-gold mx-auto"></div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-3xl bg-[#06113A] gold-border hover:translate-y-2 transition duration-300">
-                    <div class="text-gold mb-6 italic font-serif text-3xl">01</div>
-                    <h3 class="text-xl font-bold mb-4">Conselheira Consultiva</h3>
-                    <p class="text-sm text-[#D8E2FF]/60">Direcionamento estratégico para governança e tomada de decisão em alto nível.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-10 rounded-3xl bg-[#06113A] gold-border hover:bg-white/5 transition duration-300">
+                    <h3 class="text-xl font-bold text-gold mb-4 uppercase tracking-tighter">Conselheira Consultiva</h3>
+                    <p class="text-sm text-[#D8E2FF]/70 leading-relaxed">Orientação estratégica de alto nível para governança e tomadas de decisão complexas.</p>
                 </div>
-                <div class="p-8 rounded-3xl bg-[#06113A] gold-border hover:translate-y-2 transition duration-300">
-                    <div class="text-gold mb-6 italic font-serif text-3xl">02</div>
-                    <h3 class="text-xl font-bold mb-4">Investimentos Globais</h3>
-                    <p class="text-sm text-[#D8E2FF]/60">Acesso aos mercados internacionais com inteligência e proteção cambial.</p>
+                <div class="p-10 rounded-3xl bg-[#06113A] gold-border hover:bg-white/5 transition duration-300">
+                    <h3 class="text-xl font-bold text-gold mb-4 uppercase tracking-tighter">Investimentos Globais</h3>
+                    <p class="text-sm text-[#D8E2FF]/70 leading-relaxed">Consultoria para diversificação de carteira em mercados internacionais com foco em proteção cambial.</p>
                 </div>
-                <div class="p-8 rounded-3xl bg-[#06113A] gold-border hover:translate-y-2 transition duration-300">
-                    <div class="text-gold mb-6 italic font-serif text-3xl">03</div>
-                    <h3 class="text-xl font-bold mb-4">Imobiliário Internacional</h3>
-                    <p class="text-sm text-[#D8E2FF]/60">Consultoria completa para aquisição de ativos imobiliários nas melhores praças mundiais.</p>
+                <div class="p-10 rounded-3xl bg-[#06113A] gold-border hover:bg-white/5 transition duration-300">
+                    <h3 class="text-xl font-bold text-gold mb-4 uppercase tracking-tighter">Imobiliário Internacional</h3>
+                    <p class="text-sm text-[#D8E2FF]/70 leading-relaxed">Curadoria e consultoria para aquisição de ativos imobiliários nas praças mais rentáveis do mundo.</p>
                 </div>
-                <div class="p-8 rounded-3xl bg-[#06113A] gold-border hover:translate-y-2 transition duration-300">
-                    <div class="text-gold mb-6 italic font-serif text-3xl">04</div>
-                    <h3 class="text-xl font-bold mb-4">Mentoria</h3>
-                    <p class="text-sm text-[#D8E2FF]/60">Desenvolvimento de mentalidade financeira e liderança para sucessão e crescimento.</p>
+                <div class="p-10 rounded-3xl bg-[#06113A] gold-border hover:bg-white/5 transition duration-300">
+                    <h3 class="text-xl font-bold text-gold mb-4 uppercase tracking-tighter">Mentoria</h3>
+                    <p class="text-sm text-[#D8E2FF]/70 leading-relaxed">Transformação comportamental e financeira para líderes que buscam o próximo nível de performance.</p>
                 </div>
-                <div class="p-8 rounded-3xl bg-[#06113A] gold-border hover:translate-y-2 transition duration-300">
-                    <div class="text-gold mb-6 italic font-serif text-3xl">05</div>
-                    <h3 class="text-xl font-bold mb-4">Palestras</h3>
-                    <p class="text-sm text-[#D8E2FF]/60">Conteúdo de alto impacto sobre finanças, comportamento e cenários globais.</p>
+                <div class="p-10 rounded-3xl bg-[#06113A] gold-border hover:bg-white/5 transition duration-300">
+                    <h3 class="text-xl font-bold text-gold mb-4 uppercase tracking-tighter">Palestras</h3>
+                    <p class="text-sm text-[#D8E2FF]/70 leading-relaxed">Conteúdo técnico e inspiracional sobre o novo cenário econômico e inteligência emocional financeira.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cases" class="py-24">
+    <section id="cases" class="py-24 relative overflow-hidden">
         <div class="mx-auto max-w-7xl px-6">
-            <h2 class="text-3xl font-serif text-center mb-16">Resultados que <span class="text-gold font-bold">Falam por si</span></h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <blockquote class="p-10 rounded-2xl bg-white/5 italic text-lg gold-border relative">
-                    "A visão da Flavia sobre o mercado imobiliário em Portugal mudou nossa estratégia familiar. Hoje temos segurança em Euro."
-                    <footer class="mt-6 text-gold font-bold not-italic text-sm text-right">— Diretor Executivo, Setor Tech</footer>
-                </blockquote>
-                <blockquote class="p-10 rounded-2xl bg-white/5 italic text-lg gold-border relative">
-                    "A mentoria trouxe uma clareza que anos de mercado não deram. Decisões mais frias, rentáveis e seguras."
-                    <footer class="mt-6 text-gold font-bold not-italic text-sm text-right">— Investidor Institucional</footer>
-                </blockquote>
+            <h2 class="text-3xl font-serif text-center mb-16 uppercase tracking-widest text-white">Cases de <span class="text-gold italic">Sucesso</span></h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-12 rounded-[2rem] bg-gradient-to-br from-[#0B1C5A] to-transparent gold-border">
+                    <div class="text-gold text-4xl mb-6">“</div>
+                    <p class="text-lg italic leading-relaxed mb-8">"A Flavia conseguiu organizar meu patrimônio de uma forma que eu não via saída. Hoje tenho investimentos em dólar e euro com total segurança."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-1 px-4 bg-gold"></div>
+                        <span class="text-xs font-bold uppercase tracking-widest">Empresário, Setor Industrial</span>
+                    </div>
+                </div>
+                <div class="p-12 rounded-[2rem] bg-gradient-to-br from-[#0B1C5A] to-transparent gold-border">
+                    <div class="text-gold text-4xl mb-6">“</div>
+                    <p class="text-lg italic leading-relaxed mb-8">"A consultoria imobiliária internacional foi o divisor de águas na diversificação da nossa família. O suporte foi impecável."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-1 px-4 bg-gold"></div>
+                        <span class="text-xs font-bold uppercase tracking-widest">Investidora Private</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/10 text-center">
-        <img src="https://mge-ai-web-test.s3.us-east-1.amazonaws.com/temp/chatgpt_image_1_de_abr._de_2026_16_49_10.jpg" alt="Logo" class="h-16 mx-auto mb-6 rounded-full grayscale opacity-50">
-        <p class="text-gold font-bold mb-2">Flavia Alves Advisory</p>
-        <p class="text-[#D8E2FF]/40 text-sm mb-6">+55 11 99420-8044 | flavia@alvesadvisory.com.br</p>
-        <div class="flex justify-center gap-6 text-xs tracking-widest text-[#D8E2FF]/20">
-            <span>© 2026</span>
-            <span>PRIVACIDADE</span>
-            <span>TERMOS</span>
+    <footer class="py-16 border-t border-white/10 text-center">
+        <div class="flex flex-col items-center">
+            <img src="https://mge-ai-web-test.s3.us-east-1.amazonaws.com/temp/chatgpt_image_1_de_abr._de_2026_16_49_10.jpg" alt="Logo" class="h-16 w-16 rounded-full grayscale opacity-50 mb-6">
+            <h4 class="text-gold font-bold tracking-widest uppercase mb-2">Flavia Alves Advisory</h4>
+            <p class="text-sm text-[#D8E2FF]/40 mb-8">Transformando mentalidade em legado financeiro.</p>
+            <div class="flex flex-col gap-2 text-xs font-bold text-gold mb-12">
+                <a href="tel:5511994208044" class="hover:underline">+55 11 99420-8044</a>
+                <span>São Paulo | Brasil | Global</span>
+            </div>
+            <p class="text-[10px] text-white/20 uppercase tracking-[0.4em]">© 2026 Flavia Alves Advisory - Todos os direitos reservados.</p>
         </div>
     </footer>
 
